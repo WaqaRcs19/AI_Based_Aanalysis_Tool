@@ -69,21 +69,5 @@ if uploaded_file:
     sns.heatmap(df.corr(numeric_only=True), annot=True, cmap="coolwarm")
     st.pyplot(fig)
 
-    st.subheader("Ask Questions About Your Data")
-
-    question = st.text_input("Ask something like: Which region has highest sales?")
-
-    if question:
-
-        prompt = f"""
-        You are a data analyst.
-
-        Dataset columns:
-        {df.columns}
-
-        Question:
-        {question}
-        """
-
         st.write("AI Response:")
         st.write("This feature works after connecting OpenAI API.")
